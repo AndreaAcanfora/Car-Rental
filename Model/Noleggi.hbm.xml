@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.Noleggi" table="noleggi" catalog="db_es_2_pag181">
+        <id name="codiceNoleggio" type="java.lang.Integer">
+            <column name="codice_noleggio" />
+            <generator class="identity" />
+        </id>
+        <property name="auto" type="string">
+            <column name="auto" length="7" not-null="true" />
+        </property>
+        <property name="socio" type="string">
+            <column name="socio" length="16" not-null="true" />
+        </property>
+        <property name="inizio" type="date">
+            <column name="inizio" length="10" not-null="true" />
+        </property>
+        <property name="fine" type="date">
+            <column name="fine" length="10" not-null="true" />
+        </property>
+        <property name="autoRestituita" type="boolean">
+            <column name="auto_restituita" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

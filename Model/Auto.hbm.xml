@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.Auto" table="auto" catalog="db_es_2_pag181">
+        <id name="targa" type="string">
+            <column name="targa" length="7" />
+            <generator class="assigned" />
+        </id>
+        <property name="marca" type="string">
+            <column name="marca" length="15" not-null="true" />
+        </property>
+        <property name="modello" type="string">
+            <column name="modello" length="15" not-null="true" />
+        </property>
+        <property name="costoGiornallero" type="double">
+            <column name="costo_giornallero" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

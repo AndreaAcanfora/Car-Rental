@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.Soci" table="soci" catalog="db_es_2_pag181">
+        <id name="cf" type="string">
+            <column name="CF" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="cognome" type="string">
+            <column name="cognome" length="20" not-null="true" />
+        </property>
+        <property name="nome" type="string">
+            <column name="nome" length="20" not-null="true" />
+        </property>
+        <property name="indirizzo" type="string">
+            <column name="indirizzo" length="30" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
